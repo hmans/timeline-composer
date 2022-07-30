@@ -115,6 +115,10 @@ Delays can be nested to create a waterfall of animations.
 </Delay>
 ```
 
+## Author
+
+Timeline Composer is written and maintained by [Hendrik Mans](https://hmans.co). If you have questions, email me at [mailto:hendrik@mans.de](hendrik@mans.de), or [find me on Twitter](https://twitter.com/hmans).
+
 ## License
 
 ```
