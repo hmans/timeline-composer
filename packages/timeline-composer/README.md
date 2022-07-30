@@ -9,11 +9,11 @@ A small collection of React components for declaratively constructing timelines 
 ## Features
 
 - Compose React component timelines with **repetitions**, **delays**, and **auto-removing elements** from a small set of timing primitives.
-- Uses a custom `requestAnimationFrame`-based ticker with a **high-precision timer**, **clamped frame deltas**, and optional **time scaling**.[^1]
+- Uses a custom `requestAnimationFrame`-based ticker with **clamped frame deltas** and optional **time scaling**.[^1]
 - Compact API surface, tiny footprint, no dependencies.
-- Built with TypeScript, because types are nice.
+- Built with TypeScript, because types are nice, and so are you.
 
-[^1]: Time scaling coming soon.
+[^1]: Time scaling is work in progress.
 
 ## Getting started
 
