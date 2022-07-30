@@ -1,6 +1,6 @@
 # Timeline Composer
 
-A small collection of utility components for declaratively constructing timelines with repetitions, delays, and auto-removing elements.
+A small collection of React components for declaratively constructing timelines with **repetitions**, **delays**, and **auto-removing** elements.
 
 ## Features
 
