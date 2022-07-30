@@ -1,5 +1,11 @@
 # timeline-composer
 
+## 0.1.1
+
+### Patch Changes
+
+- 4a9d9e4: **Fixed:** package now includes build artifacts. :-)
+
 ## 0.1.0
 
 ### Minor Changes
