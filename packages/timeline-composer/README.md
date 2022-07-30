@@ -11,6 +11,16 @@ A small collection of utility components for declaratively constructing timeline
 
 [^1]: Time scaling coming soon.
 
+## Getting started
+
+Simply add the `timeline-composer` package using your favorite package manager.
+
+```
+yarn add timeline-composer
+npm add timeline-composer
+pnpm add timeline-composer
+```
+
 ## Components
 
 ### Delay
