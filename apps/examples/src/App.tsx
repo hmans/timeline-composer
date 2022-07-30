@@ -11,6 +11,7 @@ const App = () => (
 	<div style={{ width: 800, margin: "0 auto" }}>
 		<h1>Timeline Composer Test</h1>
 		<p>I'm immediately visible.</p>
+
 		<p>
 			A second from now, you will see a simple "animation", ahem, and it will repeat every
 			6 seconds:
@@ -33,6 +34,16 @@ const App = () => (
 					</Box>
 				</Delay>
 			</Box>
+		</Repeat>
+
+		<Repeat seconds={1}>
+			<Lifetime seconds={0.5}>
+				<p>See</p>
+			</Lifetime>
+
+			<Delay seconds={0.5}>
+				<p>Saw</p>
+			</Delay>
 		</Repeat>
 	</div>
 )
