@@ -15,7 +15,7 @@ const App = () => (
 			A second from now, you will see a simple "animation", ahem, and it will repeat every
 			6 seconds:
 		</p>
-		<Repeat interval={6}>
+		<Repeat seconds={6}>
 			<Box>
 				I'm <strong>repeating every 6 seconds</strong>!
 				<Delay seconds={1}>
