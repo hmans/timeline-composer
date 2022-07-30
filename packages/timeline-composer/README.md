@@ -2,13 +2,22 @@
 
 A small collection of utility components for declaratively constructing timelines with repetitions, delays, and auto-removing elements.
 
+## Features
+
+- Compose React component timelines with **repetitions**, **delays**, and **auto-removing elements** from a small set of timing primitives.
+- Uses a custom `requestAnimationFrame`-based ticker with a **high-precision timer**, **clamped frame deltas**, and optional **time scaling**.[^1]
+- Compact API surface, tiny footprint, no dependencies.
+- Built with TypeScript, because types are nice.
+
+[^1]: Time scaling coming soon.
+
 ## Components
 
 ### Delay
 
 Delays rendering its children for the specified amount of time.
 
-```tsx
+```jsx
 <Delay seconds={2.5}>
   <p>I will only render after 2.5 seconds!</p>
 </Delay>
@@ -18,7 +27,7 @@ Delays rendering its children for the specified amount of time.
 
 Repeats (unmounts and re-mounts) its children for the specified number of times, with the specified delay between each repetition.
 
-```tsx
+```jsx
 <Repeat seconds={2.5} times={3}>
   <p>
     I will automatically unmount and re-mount every 2.5 seconds, and stop after showing 3
@@ -29,7 +38,7 @@ Repeats (unmounts and re-mounts) its children for the specified number of times,
 
 The default for `times` is `Infinity`, so it will repeat forever:
 
-```tsx
+```jsx
 <Repeat seconds={2.5}>
   <p>I will repeat forever.</p>
   <p>Have a random number: {Math.random()}</p>
@@ -42,19 +51,19 @@ Only repeat 3 times (default is `Infinity`):
 
 Will render its children immediately, but remove them after the specified time.
 
-```tsx
+```jsx
 <Lifetime seconds={2.5}>
   <p>I'm only here for 2.5 seconds. Cya!</p>
 </Lifetime>
 ```
 
-## Recipes
+## Examples
 
 ### Combining Delay, Repeat, and Lifetime
 
 Things get a little more interesting when you combine these.
 
-```tsx
+```jsx
 <Lifetime seconds={10}>
   <Repeat seconds={0.5}>
     <Lifetime seconds={0.25}>
@@ -64,9 +73,9 @@ Things get a little more interesting when you combine these.
 </Lifetime>
 ```
 
-### Repeatedly Toggle between different children
+### Repeatedly toggling between two states
 
-```tsx
+```jsx
 <Repeat seconds={1}>
   <Lifetime seconds={0.5}>
     <p>See</p>
@@ -82,7 +91,7 @@ Things get a little more interesting when you combine these.
 
 Delays can be nested to create a waterfall of animations.
 
-```tsx
+```jsx
 <Delay seconds={1}>
   <p>One...</p>
 
@@ -94,4 +103,29 @@ Delays can be nested to create a waterfall of animations.
     </Delay>
   </Delay>
 </Delay>
+```
+
+## License
+
+```
+Copyright (c) 2022 Hendrik Mans
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
