@@ -80,8 +80,6 @@ The default for `times` is `Infinity`, so it will repeat forever:
 </Repeat>
 ```
 
-Only repeat 3 times (default is `Infinity`):
-
 ### Lifetime
 
 Will render its children immediately, but remove them after the specified time.
