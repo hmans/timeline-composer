@@ -4,7 +4,7 @@
 [![Downloads](https://img.shields.io/npm/dt/timeline-composer.svg?style=for-the-badge)](https://www.npmjs.com/package/timeline-composer)
 [![Bundle Size](https://img.shields.io/bundlephobia/min/timeline-composer?label=bundle%20size&style=for-the-badge)](https://bundlephobia.com/result?p=timeline-composer)
 
-A small collection of React components for declaratively constructing timelines with **repetitions**, **delays**, and **auto-removing** elements.
+A small collection of React components for declaratively constructing high-level animation timelines with **repetitions**, **delays**, and **auto-removing** elements.
 
 ## Features
 
