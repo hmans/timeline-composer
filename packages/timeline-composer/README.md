@@ -12,16 +12,16 @@ You can use Timeline Composer in any type of React project. Here's an example wh
 
 ```jsx
 <Lifetime seconds={5}>
-  <SmokeRing depthTexture={depthTexture} />
+  <SmokeRing />
   <Fireball />
 
   <Delay seconds={0.3}>
-    <Fireball />
     <CameraShake decay />
+    <Fireball />
 
     <Delay seconds={0.2}>
       <Rocks />
-      <SmokeCloud depthTexture={depthTexture} />
+      <SmokeCloud />
     </Delay>
   </Delay>
 </Lifetime>
