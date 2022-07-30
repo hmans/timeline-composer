@@ -1,4 +1,4 @@
-# Timeline Composer
+![Timeline Composer](https://user-images.githubusercontent.com/1061/181918686-b08c92bc-696a-4abf-964f-40fe7bf94cea.jpg)
 
 [![Version](https://img.shields.io/npm/v/timeline-composer?style=for-the-badge)](https://www.npmjs.com/package/timeline-composer)
 [![Downloads](https://img.shields.io/npm/dt/timeline-composer.svg?style=for-the-badge)](https://www.npmjs.com/package/timeline-composer)
