@@ -6,6 +6,27 @@
 
 A small collection of React components for declaratively constructing high-level animation timelines with **repetitions**, **delays**, and **auto-removing** elements.
 
+## Example
+
+You can use Timeline Composer in any type of React project. Here's an example where it's used to orchestrate a staggered [VFX Composer](https://github.com/hmans/vfx-composer) animation:
+
+```jsx
+<Lifetime seconds={5}>
+  <SmokeRing depthTexture={depthTexture} />
+  <Fireball />
+
+  <Delay seconds={0.3}>
+    <Fireball />
+    <CameraShake decay />
+
+    <Delay seconds={0.2}>
+      <Rocks />
+      <SmokeCloud depthTexture={depthTexture} />
+    </Delay>
+  </Delay>
+</Lifetime>
+```
+
 ## Features
 
 - Compose React component timelines with **repetitions**, **delays**, and **auto-removing elements** from a small set of timing primitives.
