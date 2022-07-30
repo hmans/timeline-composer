@@ -7,16 +7,17 @@ const Box = ({ children }: { children?: ReactNode }) => (
 	</div>
 )
 
-function App() {
-	return (
-		<>
-			<h1>Timeline Composer Test</h1>
-			<p>I'm immediately visible.</p>
-			<p>
-				A second from now, you will see a simple "animation", ahem, and it will repeat
-				every 6 seconds:
-			</p>
-			<Repeat interval={6}>
+const App = () => (
+	<div style={{ width: 800, margin: "0 auto" }}>
+		<h1>Timeline Composer Test</h1>
+		<p>I'm immediately visible.</p>
+		<p>
+			A second from now, you will see a simple "animation", ahem, and it will repeat every
+			6 seconds:
+		</p>
+		<Repeat interval={6}>
+			<Box>
+				I'm <strong>repeating every 6 seconds</strong>!
 				<Delay seconds={1}>
 					<Box>
 						I'm visible after a second. Something else will appear{" "}
@@ -31,9 +32,9 @@ function App() {
 						</Delay>
 					</Box>
 				</Delay>
-			</Repeat>
-		</>
-	)
-}
+			</Box>
+		</Repeat>
+	</div>
+)
 
 export default App
