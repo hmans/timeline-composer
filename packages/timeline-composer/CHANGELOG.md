@@ -1,5 +1,11 @@
 # timeline-composer
 
+## 0.1.3
+
+### Patch Changes
+
+- 32bcc98: **Fixed:** Use `useEffect`, not `useLayoutEffect`, in `useAnimationFrame`
+
 ## 0.1.2
 
 ### Patch Changes
