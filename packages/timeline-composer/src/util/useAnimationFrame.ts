@@ -1,8 +1,8 @@
-import { useLayoutEffect } from "react"
+import { useEffect } from "react"
 import { clamp01 } from "./clamp"
 
 export const useAnimationFrame = (callback: FrameRequestCallback, deps?: any[]) => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     let id: number
     let lastTime: number
 
