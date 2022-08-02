@@ -2,30 +2,29 @@ import { useLayoutEffect } from "react"
 import { clamp01 } from "./clamp"
 
 export const useAnimationFrame = (callback: FrameRequestCallback, deps?: any[]) => {
-	useLayoutEffect(() => {
-		let running = true
-		let lastTime: number
+  useLayoutEffect(() => {
+    let id: number
+    let lastTime: number
 
-		const tick = (time: number) => {
-			/* Initialize lastTime if it doesn't exist. */
-			if (!lastTime) lastTime = time
+    const tick = (time: number) => {
+      id = requestAnimationFrame(tick)
 
-			/* Determine delta time, clamped to 1 second max. */
-			const diff = time - lastTime
-			const dt = clamp01(diff / 1000)
-			lastTime = time
+      /* Initialize lastTime if it doesn't exist. */
+      if (!lastTime) lastTime = time
 
-			/* Invoke callback. */
-			callback(dt)
+      /* Determine delta time, clamped to 1 second max. */
+      const diff = time - lastTime
+      const dt = clamp01(diff / 1000)
+      lastTime = time
 
-			/* Repeat! */
-			if (running) requestAnimationFrame(tick)
-		}
+      /* Invoke callback. */
+      callback(dt)
+    }
 
-		requestAnimationFrame(tick)
+    id = requestAnimationFrame(tick)
 
-		return () => {
-			running = false
-		}
-	}, deps)
+    return () => {
+      cancelAnimationFrame(id)
+    }
+  }, deps)
 }
