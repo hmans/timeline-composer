@@ -1,5 +1,11 @@
 # timeline-composer
 
+## 0.1.4
+
+### Patch Changes
+
+- f816034: **Fixed:** `<Repeat>` was failing to repeat in R3F apps.
+
 ## 0.1.3
 
 ### Patch Changes
