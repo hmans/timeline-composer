@@ -12,7 +12,7 @@ export const Repeat: FC<RepeatProps> = ({ children, times = Infinity, seconds = 
     <Fragment key={iteration}>
       {iteration < times && (
         <Delay
-          key={Math.random()}
+          key={iteration}
           seconds={seconds}
           onComplete={() => {
             setIteration((i) => i + 1)
