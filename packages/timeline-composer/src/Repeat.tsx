@@ -3,15 +3,25 @@ import { Delay } from "./Delay"
 
 type RepeatProps = { children: ReactNode; times?: number; seconds?: number }
 
-export const Repeat: FC<RepeatProps> = ({ children, times = Infinity, seconds = 1 }) => {
-	const [iteration, setIteration] = useState(1)
+const Wrap = ({ children }: { children: ReactNode }) => <>{children}</>
 
-	return (
-		<Fragment key={iteration}>
-			{iteration < times && (
-				<Delay seconds={seconds} onComplete={() => setIteration(iteration + 1)} />
-			)}
-			{children}
-		</Fragment>
-	)
+export const Repeat: FC<RepeatProps> = ({ children, times = Infinity, seconds = 1 }) => {
+  const [iteration, setIteration] = useState(1)
+
+  return (
+    <Fragment key={iteration}>
+      {iteration < times && (
+        <Delay
+          key={Math.random()}
+          seconds={seconds}
+          onComplete={() => {
+            setIteration((i) => i + 1)
+          }}
+        />
+      )}
+
+      {/* To my surprise, React.Fragment with a key did not work here. */}
+      <Wrap key={iteration}>{children}</Wrap>
+    </Fragment>
+  )
 }
