@@ -138,6 +138,15 @@ Delays can be nested to create a waterfall of animations.
 </Delay>
 ```
 
+## Development
+
+Timeline Composer uses the PNPM package manager. After cloning the repository, you can get a development environment up and running by running the following commands:
+
+```sh
+pnpm install
+pnpm dev
+```
+
 ## Author
 
 Timeline Composer is written and maintained by [Hendrik Mans](https://hmans.co). If you have questions, email me at [hendrik@mans.de](mailto:hendrik@mans.de), or [find me on Twitter](https://twitter.com/hmans).
