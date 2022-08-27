@@ -5,12 +5,6 @@
   "main": "index.js",
   "author": "Hendrik Mans <hendrik@mans.de>",
   "license": "MIT",
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "apps/*"
-    ]
-  },
   "preconstruct": {
     "packages": [
       "packages/*"
