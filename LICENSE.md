@@ -1,1 +1,0 @@
-packages/timeline-composer/LICENSE.md

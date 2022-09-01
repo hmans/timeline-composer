@@ -1,1 +1,0 @@
-packages/timeline-composer/README.md
